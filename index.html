@@ -2,41 +2,43 @@
 <html>
 <head>
     <title>Pomodoro</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stcdnackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="timer.js"></script>
 </head>
 
 <body>
-    <div class="circle"></div>
-    <button type="button" class="btn btn-danger">Play</button>
-    <button type="button" class="btn btn-danger">Pause</button>
-    <button type="button" class="btn btn-danger">Stop</button>
-    <button type="button" class="btn btn-danger">Restart</button>
-    <style>
-    .circle {
-       top: 250px;
-       left: 250px;
-        height: 400px;
-        width: 400px;
-        background-color: #EC3D17;
-        border-radius: 50%;
-        border: 3px;
-        border: 5px solid;
-        box-shadow: 15px #DAD3D1;
-        margin: 150px 470px
-    }
-    .button {
-        color: lightcoral;
-        height: 200px;
-        width: 200px;
-        margin: 200px 600px;
-        
-        
-        
-
-    }
-    </style>
+    <div class="container d-flex flex-column align-items-center justify-content-center hero-full-height">
+        <div class="circle mb-5 d-flex align-items-center justify-content-center" style="font-size:35px;">
+            <span id="mins"></span>
+            <span>:</span>
+            <span id="secs"></span>
+        </div>
+        <div>
+            <img src="play-button.svg" style="height: 60px;">  
+            <img src="pause.svg" style="height: 60px;">
+            <img src="stop.svg" style="height: 60px;">
+            <img src="restart.svg" style= "height: 60px;">
+        </div>
+        <script>
+            var seconds = 1456;
+            console.log("Hey I am working");
+            function getTimeInMinutes() {
+                document.getElementById("mins").innerHTML = seconds / 60;
+                console.log("Mins working");
+            }
+            
+            function getTimeInSeconds() {
+                document.getElementById("secs").innerHTML = seconds % 60;
+                console.log("Secs working");
+            }
+            
+            getTimeInMinutes();
+            getTimeInSeconds();
+        </script>
+    </div>
 </body>
 </html>

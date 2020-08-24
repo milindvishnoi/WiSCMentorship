@@ -1,0 +1,20 @@
+.circle {
+     height: 400px;
+     width: 400px;
+     background-color: #EC3D17;
+     border-radius: 50%;
+     border: 3px;
+     border: 5px solid;
+     box-shadow: 15px #DAD3D1;
+     
+ }
+ .button {
+     color: lightcoral;
+     height: 200px;
+     width: 200px;
+     margin: 200px 600px;
+
+ }
+ .hero-full-height {
+     height: 100vh;
+ }
