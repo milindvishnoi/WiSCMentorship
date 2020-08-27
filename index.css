@@ -8,6 +8,52 @@
      box-shadow: 15px #DAD3D1;
      
  }
+
+ /***POP UPS SETTINGS***/
+
+#fade { /*--Transparent background layer--*/
+    display: none; /*--hidden by default--*/
+    background-image: url(https://www.cbs.com/shows/the-twilight-zone/video/qBvlXudfvLDmPB2HIhqFrEbGxR6t_w_C/the-twilight-zone-blurryman/);
+    position: fixed; left: 0; top: 0;
+    width: 100%; height: 100%;
+    opacity: .75;
+    z-index: 9999;
+    }
+    .popup_block{
+    animation:shakePop 2.5s;
+    -webkit-animation:shakePop 2.5s;
+    display: none; /*--hidden by default--*/
+    background: #fff;
+    padding: 20px;
+    border: 1px solid {color:borders};
+    float: leFt;
+    font-size: 14px;
+    line-height:16px;
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: 99999;
+    /*--CSS3 Box Shadows--*/
+    -webkit-box-shadow: 0px 0px 20px {color:post hover};
+    -moz-box-shadow: 0px 0px 20px {color:post hover};
+    box-shadow: 0px 0px 20px {color:post hover};
+    /*--CSS3 Rounded Corners--*/
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 20px;
+    }
+    img.btn_close {
+    float: right;
+    margin: -5px -5px 0 0;
+    }
+     
+    /*--Making IE6 Understand Fixed Positioning--*/
+    *html #fade {
+    position: absolute;
+    }
+    *html .popup_block {
+    position: absolute;
+    }
+
  .button {
      color: lightcoral;
      height: 200px;
@@ -17,4 +63,20 @@
  }
  .hero-full-height {
      height: 100vh;
+ }
+
+ body {
+     background-color: white;
+ }
+
+ @media screen and (max-width: 992px) {
+     body{
+         background-colour: #fffdd0;
+     }
+ }
+
+ @media screen and (max-width: 600px) {
+     body {
+         background-colour:#fffee3;
+     }
  }
